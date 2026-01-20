@@ -18,11 +18,11 @@ A CSV file is uploaded to the raw data S3 bucket.
 **Transform:**
 The upload event triggers a Lambda function that:
 
-Loads the CSV file into a Pandas DataFrame.
+-> Loads the CSV file into a Pandas DataFrame.
 
-Removes rows with missing or invalid values.
+-> Removes rows with missing or invalid values.
 
-Standardizes column names for consistency.
+-> Standardizes column names for consistency.
 
 **Load:**
 The cleaned dataset is written back to a separate S3 bucket as a new CSV file, making it ready for downstream analytics or reporting tools such as Amazon Athena or Tableau.
